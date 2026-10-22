@@ -33,6 +33,12 @@ and this project uses calendar versioning (YYYY.M.D).
   through the new `gains.kd_joint` / `--gains kd.<joint>=` overrides. Reorient
   actuators and deploy gains are unchanged. Existing PenSpin checkpoints were
   trained with the old actuators.
+- PenSpin setup guide: the pen tag patterns are printed in two colors from
+  `pen_heads.3mf`, so no stickers are needed; the tag textures and
+  `texture_faces.csv` apply only to single-color prints with stickers
+  ([#19](https://github.com/wuji-technology/wuji-mjlab/issues/19)).
+- README and task guides: download links, `gh release download` commands and
+  extracted paths point to the v2026.10.22 release assets.
 
 ### Removed
 
@@ -42,6 +48,15 @@ and this project uses calendar versioning (YYYY.M.D).
   `/docs-done` and `/docs-skip` comment callbacks, automatic merges into
   `docs-prerelease` and conflict issues, and the associated scripts and
   path-filter configuration.
+
+### Fixed
+
+- `deploy/reorient/tools/view_release_cube.py`: default `--cube` to
+  `release-assets/reorient/hardware/cube.obj`, where the cube mesh sits in the
+  current release asset layout; the previous default no longer existed.
+- Hardware guide: the cube files are under `reorient/hardware/` and the hand
+  jigs under `hardware/hand1/` and `hardware/hand2/` in the release assets; the
+  guide still described an older asset layout.
 
 ## [2026.9.27]
 
