@@ -13,6 +13,7 @@ import onnxruntime as ort
 import pytest
 import torch
 import torch.nn as nn
+from wuji_mjlab.assets.robots.wuji_hand.wuji_hand_cfg import wuji_hand_xml_path
 from wuji_mjlab.assets.robots.wuji_hand2.wuji_hand2_cfg import wuji_hand2_xml_path
 from wuji_mjlab.tasks.reorient.tooling import onnx_export_core as export_onnx
 from wuji_mjlab.tasks.reorient.tooling import stamp_policy_metadata as stamp_tool
@@ -271,6 +272,76 @@ def test_export_identity_unwraps_recorded_nested_hand2_partials(tmp_path):
   inner["state"][1][0] = {"unexpected": "not a path"}
   with pytest.raises(ValueError, match="unexpected.*not a path"):
     export_onnx._build_config(str(tmp_path), env_cfg)
+
+
+def test_export_identity_accepts_runs_recorded_before_the_submodule(tmp_path):
+  constants = load_constants(2, "right")
+  legacy = (
+    "/ckpt/wuji-mjlab/src/wuji_mjlab/assets/robots/wuji_hand2/mjcf/right_mjlab.xml"
+  )
+  env_cfg = {
+    "scene": {
+      "entities": {
+        "robot": {
+          "spec_fn": {"state": [None, [legacy]]},
+          "init_state": {
+            "joint_pos": dict(
+              zip(
+                joint_names("right"), constants.default_joint_pos.tolist(), strict=True
+              )
+            )
+          },
+        }
+      }
+    },
+    "observations": {
+      "policy": {"terms": {name: {} for name, _ in constants.obs_terms}},
+    },
+    "actions": {"joint_pos": {"action_scale": 0.5}},
+  }
+  config = export_onnx._build_config(str(tmp_path), env_cfg)
+  assert config["robot_mjcf"] == legacy
+  assert config["hand_gen"] == 2
+  assert config["joint_order"] == list(joint_names("right"))
+
+
+@pytest.mark.parametrize(
+  ("gen", "xml_path"), [(1, wuji_hand_xml_path), (2, wuji_hand2_xml_path)]
+)
+def test_stamped_robot_mjcf_matches_export(tmp_path, synthetic_policy, gen, xml_path):
+  constants = load_constants(gen, "right")
+  env_cfg = {
+    "scene": {
+      "entities": {
+        "robot": {
+          "spec_fn": {"state": [None, [str(xml_path("right"))]]},
+          "init_state": {
+            "joint_pos": dict(
+              zip(
+                joint_names("right"), constants.default_joint_pos.tolist(), strict=True
+              )
+            )
+          },
+        }
+      }
+    },
+    "observations": {
+      "policy": {"terms": {name: {} for name, _ in constants.obs_terms}},
+    },
+    "actions": {"joint_pos": {"action_scale": 0.5}},
+  }
+  exported = export_onnx._build_config(str(tmp_path), env_cfg)
+  onnx_path = _copy_legacy_policy(tmp_path, synthetic_policy)
+
+  stamp_tool.stamp_policy_metadata(
+    onnx_path, stamp_tool._identity_from_constants(gen, "right")
+  )
+
+  metadata = {prop.key: prop.value for prop in onnx.load(onnx_path).metadata_props}
+  stamped = json.loads(metadata[export_onnx._POLICY_IDENTITY_KEY])["robot_mjcf"]
+  assert Path(stamped).is_file()
+  assert stamped == exported["robot_mjcf"]
+  assert json.loads((tmp_path / "config.json").read_text())["robot_mjcf"] == stamped
 
 
 @pytest.mark.parametrize("directory_sidecar", [False, True])

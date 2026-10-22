@@ -79,6 +79,8 @@ class Hand2Compat:
         # (finger1..5 × joint1..4, e.g. finger5_joint2 -> 4*4+1 = 17).
         # The device mit_params resource is natively a 20-element array.
         kp_overrides: dict | None = None,
+        # Per-joint kd overrides, same {flat_idx: kd} indexing as kp_overrides.
+        kd_overrides: dict | None = None,
         # Per-joint effort-limit (A) overrides on top of the global scalar
         # set via write_joint_effort_limit; same {flat_idx: amps} indexing.
         # effort_limit().set is polymorphic: scalar = all 20, list[20] =
@@ -121,6 +123,8 @@ class Hand2Compat:
         self._kp, self._kd = float(kp), float(kd)
         self._kp_overrides = {int(k): float(v)
                               for k, v in (kp_overrides or {}).items()}
+        self._kd_overrides = {int(k): float(v)
+                              for k, v in (kd_overrides or {}).items()}
         self._effort_overrides = {int(k): float(v)
                                   for k, v in (effort_overrides or {}).items()}
         self._effort_limit_a = 0.5  # overwritten by write_joint_effort_limit
@@ -202,46 +206,65 @@ class Hand2Compat:
 
     # ---- internals -----------------------------------------------------
 
-    def _apply_effort_limit(self) -> None:
+    def _apply_effort_limit(self) -> list[tuple[str, int, float, float | None]]:
         """Write the current limit: global scalar, or per-joint list[20]
-        merged with overrides. Read-back verifies overrides landed
-        (get() returns None for offline joints)."""
+        merged with overrides. Returns the overrides whose read-back did not
+        land (get() returns None for offline joints)."""
         if not self._effort_overrides:
             self._hand.effort_limit().set(self._effort_limit_a)
-            return
+            return []
         self._hand.effort_limit().set(
             [self._effort_overrides.get(i, self._effort_limit_a)
              for i in range(20)]
         )
         back = self._hand.effort_limit().get()
+        mismatches = []
         for i, want in sorted(self._effort_overrides.items()):
-            got = back[i]
-            ok = got is not None and abs(float(got) - want) < 1e-3
+            got = None if back[i] is None else float(back[i])
+            ok = got is not None and abs(got - want) < 1e-3
             print(f"[hand2] effort override joint[{i}] "
                   f"(finger{i // 4 + 1}_joint{i % 4 + 1}): "
-                  f"{'offline' if got is None else f'{float(got):g}A'} "
+                  f"{'offline' if got is None else f'{got:g}A'} "
                   f"({'OK' if ok else 'MISMATCH!'})")
+            if not ok:
+                mismatches.append(("effort", i, want, got))
+        return mismatches
 
     def _ensure_enabled(self) -> None:
         if self._enabled:
             return
-        self._apply_effort_limit()
-        if self._kp_overrides:
-            # Per-joint array write: global (kp, kd) everywhere, kp swapped
-            # on the override indices. Read-back verifies the write landed.
+        mismatches = self._apply_effort_limit()
+        if self._kp_overrides or self._kd_overrides:
+            # Per-joint array write: global (kp, kd) everywhere, kp / kd
+            # swapped on the override indices. Read-back verifies the write landed.
             MP = self._sdk.MitParam
-            arr = [MP(self._kp_overrides.get(i, self._kp), self._kd)
+            arr = [MP(self._kp_overrides.get(i, self._kp),
+                      self._kd_overrides.get(i, self._kd))
                    for i in range(20)]
             self._hand.mit_params().set(arr)
             back = self._hand.mit_params().get()
-            for i, want in self._kp_overrides.items():
-                got = float(back[i].kp)
-                mark = "OK" if abs(got - want) < 1e-3 else "MISMATCH!"
-                print(f"[hand2] kp override joint[{i}] "
-                      f"(finger{i // 4 + 1}_joint{i % 4 + 1}): "
-                      f"kp={got:g} ({mark})")
+            for name, overrides in (("kp", self._kp_overrides),
+                                    ("kd", self._kd_overrides)):
+                for i, want in sorted(overrides.items()):
+                    raw = None if back[i] is None else getattr(back[i], name)
+                    got = None if raw is None else float(raw)
+                    ok = got is not None and abs(got - want) < 1e-3
+                    print(f"[hand2] {name} override joint[{i}] "
+                          f"(finger{i // 4 + 1}_joint{i % 4 + 1}): "
+                          f"{name}={'offline' if got is None else f'{got:g}'} "
+                          f"({'OK' if ok else 'MISMATCH!'})")
+                    if not ok:
+                        mismatches.append((name, i, want, got))
         else:
             self._hand.mit_params().set((self._kp, self._kd))
+        if mismatches:
+            raise RuntimeError(
+                "[hand2] read-back mismatch, motors NOT enabled: " + "; ".join(
+                    f"{name} finger{i // 4 + 1}_joint{i % 4 + 1} target={want:g} "
+                    f"readback={'None' if got is None else f'{got:g}'}"
+                    for name, i, want, got in mismatches
+                )
+            )
         self._hand.enable()
         time.sleep(0.25)  # let the low-level driver arm before streaming
         self._pub = self._hand.joint_command().publish()

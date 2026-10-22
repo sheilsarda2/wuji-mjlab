@@ -13,7 +13,7 @@ wuji-mjlab installs through [pixi](https://pixi.sh), which resolves the full CUD
 
 - Linux x86_64
 - NVIDIA GPU with CUDA 12.8 (Blackwell sm_120 / RTX 50-series supported)
-- [pixi](https://pixi.sh) ≥ 0.66 (the version CI uses)
+- [pixi](https://pixi.sh) ≥ 0.72 (the version CI uses)
 
 For sim-to-real deployment, you also need Wuji Hand hardware and a camera rig. See [Hardware Setup](../hardware) for the full bill of materials.
 
@@ -23,16 +23,17 @@ For sim-to-real deployment, you also need Wuji Hand hardware and a camera rig. S
 # 1. install pixi (one-time)
 curl -fsSL https://pixi.sh/install.sh | bash
 
-# 2. clone and resolve the environment
-git clone https://github.com/wuji-technology/wuji-mjlab
+# 2. clone with the wuji-description submodule and resolve the environment
+git clone --recurse-submodules https://github.com/wuji-technology/wuji-mjlab
 cd wuji-mjlab
 pixi install
 ```
 
-This produces a `default` environment for training and evaluation. For the sim-to-real bridge, add the optional `deploy` environment:
+This produces a `default` environment for training and evaluation. The Wuji Hand 1 and Hand 2 models are read from the `src/wuji_mjlab/assets/robots/wuji-description` submodule; in an existing clone, fetch it with `git submodule update --init`. For the sim-to-real bridge, add the optional deploy environment of the task you deploy:
 
 ```bash
-pixi install -e deploy
+pixi install -e reorient-deploy   # cube reorientation
+pixi install -e pen-spin-deploy   # pen spinning
 ```
 
 ## Verify
