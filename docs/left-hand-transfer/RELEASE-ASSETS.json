@@ -57,6 +57,21 @@
       "asset_name": "original-penspin-left-comparison.mp4",
       "bytes": 4741957,
       "sha256": "aad2f658918e19ba227fddcd3a5f2e1616844ed44b4591b76b11123f0ec40c96"
+    },
+    {
+      "asset_name": "wuji-left-right-2x2.mp4",
+      "bytes": 13940832,
+      "sha256": "644171143977e09ded897d744000695bf637e7a768251c27d9c016f3b2cbbf3e"
+    },
+    {
+      "asset_name": "wuji-left-right-2x2-preview.gif",
+      "bytes": 23632738,
+      "sha256": "d7f147bd8b795389c98423951e56f24fabdf82f8c6713b65d418b70923581e6d"
+    },
+    {
+      "asset_name": "left-right-2x2-evidence.zip",
+      "bytes": 56057019,
+      "sha256": "dd5f317ff3ec389a0cea391e81152384204278b164571a2f408c0466a075649d"
     }
   ]
 }

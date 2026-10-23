@@ -1,0 +1,140 @@
+{
+  "scope": "All artifact files except ARTIFACTS.json",
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 2764,
+      "sha256": "95110481d5b27fba21c06c3fd5ff95ac5c319747f0799b8e91b8add7bb941b1f"
+    },
+    {
+      "file": "composition.json",
+      "bytes": 8063,
+      "sha256": "91d5fab3842fea57c98fcba885479550588c4ba4b57723b490c1ddfbedb224b3"
+    },
+    {
+      "file": "cube-header.png",
+      "bytes": 11649,
+      "sha256": "6c60376f0f0233a8eb7ec98a6b3bb2d49c9edb647259e7fcdcc9bd9ca2b7dc3f"
+    },
+    {
+      "file": "footer.png",
+      "bytes": 13426,
+      "sha256": "c5d700b08b5daf7fb1414d8b7675a3316c1e1cf8c02ed5a6361d89e484bb88fa"
+    },
+    {
+      "file": "frame-10s.png",
+      "bytes": 1533345,
+      "sha256": "df2206e18a886b42f2790a56e166c4205c7207e749f771b7ac70d6b94f146bea"
+    },
+    {
+      "file": "frame-ending.png",
+      "bytes": 1568657,
+      "sha256": "ed6670376637c7d8edcb2a6ec642b5e4ab31aa5e6d5351785833dcc92d5e43b9"
+    },
+    {
+      "file": "inputs/cube-left-adapted.json",
+      "bytes": 290251,
+      "sha256": "f6da5e2d2276bd99f735197dfef6733160f7a1d33aa581585b05e9544bd4161f"
+    },
+    {
+      "file": "inputs/cube-left-adapted.log",
+      "bytes": 14399,
+      "sha256": "e92f2451a270320ef917f7f1654c4227947847ea10458bd3b84455e8490d20fe"
+    },
+    {
+      "file": "inputs/cube-left-adapted.mp4",
+      "bytes": 4314479,
+      "sha256": "a2b099f60a9f1a8c0f0176cd5f6dcead51629fd561d5af3785c9131af7c78599"
+    },
+    {
+      "file": "inputs/cube-left-adapted.npz",
+      "bytes": 173571,
+      "sha256": "2819e8fcaf2af17dfaa3d101a4f4139ee2662da483ead62bc43ef541233aa8eb"
+    },
+    {
+      "file": "inputs/cube-right.json",
+      "bytes": 290156,
+      "sha256": "e1e3e6b7bc64f5193cddc84249d999a9f63f3b7104c888bdd7f5a4685396cea9"
+    },
+    {
+      "file": "inputs/cube-right.log",
+      "bytes": 14396,
+      "sha256": "9895b9bb472ccccb7005311653465dcbf803cab96059b0b52a2e34871cb34c49"
+    },
+    {
+      "file": "inputs/cube-right.mp4",
+      "bytes": 4158645,
+      "sha256": "0dcd6fc66c7f0ead2875e336034c3bd428a3c735f761f7013affa3848b43f4c4"
+    },
+    {
+      "file": "inputs/cube-right.npz",
+      "bytes": 173866,
+      "sha256": "3dff745f6c6025422ba0883281a3d8f9ee47069cdb028f9bb58f59b61d4d4f76"
+    },
+    {
+      "file": "inputs/penspin-left-adapted.json",
+      "bytes": 361330,
+      "sha256": "5dc556e1f6e41808c7b1d7daad024e9488c364d1e30cd0a4043fa3ae570e14d5"
+    },
+    {
+      "file": "inputs/penspin-left-adapted.log",
+      "bytes": 14496,
+      "sha256": "93cb2a1deb3902c80952bcff3e3edf97c5f407d9b9d85c2cbb73c3084ad0f6dd"
+    },
+    {
+      "file": "inputs/penspin-left-adapted.mp4",
+      "bytes": 3117354,
+      "sha256": "72c27fab273fcd9a77a431c218481ba06e8c7c8b3c08c0a1c62bb29cbdd6eaeb"
+    },
+    {
+      "file": "inputs/penspin-left-adapted.npz",
+      "bytes": 194250,
+      "sha256": "d2b0b96b0f4085419acedf9bc6d58bf1c3ce437dcd25fabf15c89ca6c479bdfe"
+    },
+    {
+      "file": "inputs/penspin-right.json",
+      "bytes": 361257,
+      "sha256": "c18d7dc1170d39fc79c14affb40f21a312ccdec6fa10ff55b580b642daebb5c2"
+    },
+    {
+      "file": "inputs/penspin-right.log",
+      "bytes": 14494,
+      "sha256": "6f99f92fb14c16e79a931d70a1134a802db8a7975df2a4017d52203a4e6433eb"
+    },
+    {
+      "file": "inputs/penspin-right.mp4",
+      "bytes": 3030303,
+      "sha256": "491fcebe04be83d50744abc0b29222bdd2727f2e8addd13ac2e8e4027b00a43c"
+    },
+    {
+      "file": "inputs/penspin-right.npz",
+      "bytes": 194307,
+      "sha256": "36cd80635b6b3d8a8f1c5555335b3504368df189b88cf5dc416ceae3083c1925"
+    },
+    {
+      "file": "penspin-header.png",
+      "bytes": 12907,
+      "sha256": "c4e9b29b1aa66eec8eac590ea0c883e3d800493883b8fa211b2cf80b7a130029"
+    },
+    {
+      "file": "validation.json",
+      "bytes": 1412,
+      "sha256": "667eac61f0786e01723fa02350cff3a4d49ffed199772a17bec653819f350082"
+    },
+    {
+      "file": "video-probe.json",
+      "bytes": 303,
+      "sha256": "bcebdddbead625283cf8f04caa9d9b7ae8192c06fe743bcb005ddf4955b532f4"
+    },
+    {
+      "file": "wuji-left-right-2x2-preview.gif",
+      "bytes": 23632738,
+      "sha256": "d7f147bd8b795389c98423951e56f24fabdf82f8c6713b65d418b70923581e6d"
+    },
+    {
+      "file": "wuji-left-right-2x2.mp4",
+      "bytes": 13940832,
+      "sha256": "644171143977e09ded897d744000695bf637e7a768251c27d9c016f3b2cbbf3e"
+    }
+  ]
+}

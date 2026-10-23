@@ -1,0 +1,303 @@
+{
+  "source_commit": "a14da8e95d95219d1325637453cfe5cd8fe9af24",
+  "layout": [
+    [
+      "cube-left-adapted",
+      "cube-right"
+    ],
+    [
+      "penspin-left-adapted",
+      "penspin-right"
+    ]
+  ],
+  "independent_captures": 4,
+  "new_captures": [
+    "cube-right",
+    "penspin-right"
+  ],
+  "reused_captures": [
+    "cube-left-adapted",
+    "penspin-left-adapted"
+  ],
+  "input_metadata": {
+    "cube-left-adapted": {
+      "task": "WujiHand2_Reorient_50Hz",
+      "hand": "left",
+      "mirror_policy_observations": true,
+      "seed": 42,
+      "frames": 1000,
+      "fps": 50,
+      "step_dt_s": 0.02,
+      "video_duration_s": 20.0,
+      "resets": 0,
+      "targets_reached": 9,
+      "source_commit": "a14da8e95d95219d1325637453cfe5cd8fe9af24",
+      "source_dirty": false,
+      "description_commit": "829c9aa27cb12c3a49d5b8d63c9869dd8f656702",
+      "checkpoint_sha256": "8fbd62247fcb88e54daf0b7a90b6571b253dd880eb98567f9b51585b5770f74f",
+      "recipe_sha256": null,
+      "camera": {
+        "origin_type": "OriginType.ASSET_BODY",
+        "height": 720,
+        "width": 1280,
+        "enable_reflections": true,
+        "enable_shadows": true,
+        "geom_group": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "site_group": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "env_idx": 0,
+        "max_extra_envs": 2,
+        "reward_bar_max_terms": 20,
+        "distance": 0.44,
+        "elevation": -35.0,
+        "azimuth": 90.0,
+        "fovy": null,
+        "lookat": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_name": "robot",
+        "body_name": "right_palm_link"
+      }
+    },
+    "cube-right": {
+      "task": "WujiHand2_Reorient_50Hz",
+      "hand": "right",
+      "mirror_policy_observations": false,
+      "seed": 42,
+      "frames": 1000,
+      "fps": 50,
+      "step_dt_s": 0.02,
+      "video_duration_s": 20.0,
+      "resets": 0,
+      "targets_reached": 9,
+      "source_commit": "a14da8e95d95219d1325637453cfe5cd8fe9af24",
+      "source_dirty": false,
+      "description_commit": "829c9aa27cb12c3a49d5b8d63c9869dd8f656702",
+      "checkpoint_sha256": "8fbd62247fcb88e54daf0b7a90b6571b253dd880eb98567f9b51585b5770f74f",
+      "recipe_sha256": null,
+      "camera": {
+        "origin_type": "OriginType.ASSET_BODY",
+        "height": 720,
+        "width": 1280,
+        "enable_reflections": true,
+        "enable_shadows": true,
+        "geom_group": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "site_group": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "env_idx": 0,
+        "max_extra_envs": 2,
+        "reward_bar_max_terms": 20,
+        "distance": 0.44,
+        "elevation": -35.0,
+        "azimuth": 90.0,
+        "fovy": null,
+        "lookat": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "entity_name": "robot",
+        "body_name": "right_palm_link"
+      }
+    },
+    "penspin-left-adapted": {
+      "task": "WujiHand2_PenSpin",
+      "hand": "left",
+      "mirror_policy_observations": true,
+      "seed": 42,
+      "frames": 1000,
+      "fps": 50,
+      "step_dt_s": 0.02,
+      "video_duration_s": 20.0,
+      "resets": 0,
+      "targets_reached": null,
+      "source_commit": "a14da8e95d95219d1325637453cfe5cd8fe9af24",
+      "source_dirty": false,
+      "description_commit": "829c9aa27cb12c3a49d5b8d63c9869dd8f656702",
+      "checkpoint_sha256": "8a54ee787422f922b3462b29945089dc6e326d06b668e73aae754619b2fe9ddb",
+      "recipe_sha256": "ae10e8a860cbfa941e64ede9df4327863d1123af461b0b08b2edc38486a5116a",
+      "camera": {
+        "origin_type": "OriginType.WORLD",
+        "height": 720,
+        "width": 1280,
+        "enable_reflections": true,
+        "enable_shadows": true,
+        "geom_group": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "site_group": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "env_idx": 0,
+        "max_extra_envs": 2,
+        "reward_bar_max_terms": 20,
+        "distance": 0.45,
+        "elevation": -25.0,
+        "azimuth": -40.0,
+        "fovy": null,
+        "lookat": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "entity_name": null,
+        "body_name": null
+      }
+    },
+    "penspin-right": {
+      "task": "WujiHand2_PenSpin",
+      "hand": "right",
+      "mirror_policy_observations": false,
+      "seed": 42,
+      "frames": 1000,
+      "fps": 50,
+      "step_dt_s": 0.02,
+      "video_duration_s": 20.0,
+      "resets": 0,
+      "targets_reached": null,
+      "source_commit": "a14da8e95d95219d1325637453cfe5cd8fe9af24",
+      "source_dirty": false,
+      "description_commit": "829c9aa27cb12c3a49d5b8d63c9869dd8f656702",
+      "checkpoint_sha256": "8a54ee787422f922b3462b29945089dc6e326d06b668e73aae754619b2fe9ddb",
+      "recipe_sha256": "ae10e8a860cbfa941e64ede9df4327863d1123af461b0b08b2edc38486a5116a",
+      "camera": {
+        "origin_type": "OriginType.WORLD",
+        "height": 720,
+        "width": 1280,
+        "enable_reflections": true,
+        "enable_shadows": true,
+        "geom_group": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "site_group": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "env_idx": 0,
+        "max_extra_envs": 2,
+        "reward_bar_max_terms": 20,
+        "distance": 0.45,
+        "elevation": -25.0,
+        "azimuth": -40.0,
+        "fovy": null,
+        "lookat": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "entity_name": null,
+        "body_name": null
+      }
+    }
+  },
+  "command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "warning",
+    "-n",
+    "-i",
+    "/Users/sheil/.codex/visualizations/2026/10/23/01a16682-f74c-7a32-aa28-d820b2ec9291/wuji-left-right-grid/inputs/cube-left-adapted.mp4",
+    "-i",
+    "/Users/sheil/.codex/visualizations/2026/10/23/01a16682-f74c-7a32-aa28-d820b2ec9291/wuji-left-right-grid/inputs/cube-right.mp4",
+    "-i",
+    "/Users/sheil/.codex/visualizations/2026/10/23/01a16682-f74c-7a32-aa28-d820b2ec9291/wuji-left-right-grid/inputs/penspin-left-adapted.mp4",
+    "-i",
+    "/Users/sheil/.codex/visualizations/2026/10/23/01a16682-f74c-7a32-aa28-d820b2ec9291/wuji-left-right-grid/inputs/penspin-right.mp4",
+    "-loop",
+    "1",
+    "-framerate",
+    "50",
+    "-i",
+    "/Users/sheil/.codex/visualizations/2026/10/23/01a16682-f74c-7a32-aa28-d820b2ec9291/wuji-left-right-grid/cube-header.png",
+    "-loop",
+    "1",
+    "-framerate",
+    "50",
+    "-i",
+    "/Users/sheil/.codex/visualizations/2026/10/23/01a16682-f74c-7a32-aa28-d820b2ec9291/wuji-left-right-grid/penspin-header.png",
+    "-loop",
+    "1",
+    "-framerate",
+    "50",
+    "-i",
+    "/Users/sheil/.codex/visualizations/2026/10/23/01a16682-f74c-7a32-aa28-d820b2ec9291/wuji-left-right-grid/footer.png",
+    "-filter_complex_threads",
+    "2",
+    "-filter_complex",
+    "[0:v][1:v]hstack=inputs=2[top];[2:v][3:v]hstack=inputs=2[bottom];[4:v][top][5:v][bottom][6:v]vstack=inputs=5:shortest=1,format=yuv420p[out]",
+    "-map",
+    "[out]",
+    "-an",
+    "-frames:v",
+    "1000",
+    "-r",
+    "50",
+    "-c:v",
+    "libx264",
+    "-threads",
+    "4",
+    "-preset",
+    "fast",
+    "-crf",
+    "19",
+    "-pix_fmt",
+    "yuv420p",
+    "-movflags",
+    "+faststart",
+    "/Users/sheil/.codex/visualizations/2026/10/23/01a16682-f74c-7a32-aa28-d820b2ec9291/wuji-left-right-grid/wuji-left-right-2x2.mp4"
+  ],
+  "input_sha256": {
+    "cube-left-adapted": "a2b099f60a9f1a8c0f0176cd5f6dcead51629fd561d5af3785c9131af7c78599",
+    "cube-right": "0dcd6fc66c7f0ead2875e336034c3bd428a3c735f761f7013affa3848b43f4c4",
+    "penspin-left-adapted": "72c27fab273fcd9a77a431c218481ba06e8c7c8b3c08c0a1c62bb29cbdd6eaeb",
+    "penspin-right": "491fcebe04be83d50744abc0b29222bdd2727f2e8addd13ac2e8e4027b00a43c"
+  }
+}

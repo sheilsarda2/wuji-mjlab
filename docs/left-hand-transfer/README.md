@@ -41,3 +41,7 @@ contents, and [`EXPERIMENT.json`](EXPERIMENT.json) indexes the trials and result
 The original beta2 comparisons are also available directly:
 [cube](https://github.com/sheilsarda2/wuji-mjlab/releases/download/left-hand-transfer-evidence-a14da8e/original-cube-left-comparison.mp4)
 and [PenSpin](https://github.com/sheilsarda2/wuji-mjlab/releases/download/left-hand-transfer-evidence-a14da8e/original-penspin-left-comparison.mp4).
+
+## Compare left and right hands
+
+The [2×2 left/right comparison](left-right-grid/README.md) places cube reorientation above PenSpin, with the adapted left hand in the left column and the original right-hand policy in the right column. It preserves the earlier direct-transfer controls above.
