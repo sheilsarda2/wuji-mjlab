@@ -1,0 +1,245 @@
+{
+  "scope": "All artifact files except ARTIFACTS.json",
+  "files": [
+    {
+      "file": "EXPERIMENT.json",
+      "bytes": 2428,
+      "sha256": "68895b086c1f63cb9d79fae05e23f5a34a2362f7e09de4886d6f4046eaf05e0b"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3945,
+      "sha256": "ff728947c8b99cc259bc5f4c6f9e894237fb148f467e5de4c80333697f8aac14"
+    },
+    {
+      "file": "comparison-recipes.json",
+      "bytes": 841,
+      "sha256": "2c45b05d55a93d4b57b9954d7e84edf7f0e61363d78ecce5b1c944ca73225a3e"
+    },
+    {
+      "file": "media/final/cube-comparison.mp4",
+      "bytes": 10347656,
+      "sha256": "3d959746f0dfb34d5821825ae85669688d230a89c4dcbd16f16d1d61e0a22210"
+    },
+    {
+      "file": "media/final/cube-ending.jpg",
+      "bytes": 92279,
+      "sha256": "625e23c96d4a843ede2c7b3d73c4aac29c283145f92f6de70a8572535088b16e"
+    },
+    {
+      "file": "media/final/cube-footer.png",
+      "bytes": 9506,
+      "sha256": "c63ec3c20db5a3782336be11c5c608a482dd0347dd62bb0e80195954585f9b30"
+    },
+    {
+      "file": "media/final/cube-header.png",
+      "bytes": 15509,
+      "sha256": "5b8e81217a89eca98f2289e9ea23433579f580d16ad5f9f3b3c2c37f367261a4"
+    },
+    {
+      "file": "media/final/cube-left-adapted.json",
+      "bytes": 290251,
+      "sha256": "f6da5e2d2276bd99f735197dfef6733160f7a1d33aa581585b05e9544bd4161f"
+    },
+    {
+      "file": "media/final/cube-left-adapted.log",
+      "bytes": 14399,
+      "sha256": "e92f2451a270320ef917f7f1654c4227947847ea10458bd3b84455e8490d20fe"
+    },
+    {
+      "file": "media/final/cube-left-adapted.mp4",
+      "bytes": 4314479,
+      "sha256": "a2b099f60a9f1a8c0f0176cd5f6dcead51629fd561d5af3785c9131af7c78599"
+    },
+    {
+      "file": "media/final/cube-left-adapted.npz",
+      "bytes": 173571,
+      "sha256": "2819e8fcaf2af17dfaa3d101a4f4139ee2662da483ead62bc43ef541233aa8eb"
+    },
+    {
+      "file": "media/final/cube-left-direct.json",
+      "bytes": 290365,
+      "sha256": "82539dd9f792ff7b3ae179b475e75b444064b54d2d83e1ee9bb7020929a535ad"
+    },
+    {
+      "file": "media/final/cube-left-direct.log",
+      "bytes": 14394,
+      "sha256": "9d036ac2a0711a10d0a7464cc97600fc6eb710279f224f96280483c0477c7c37"
+    },
+    {
+      "file": "media/final/cube-left-direct.mp4",
+      "bytes": 6456514,
+      "sha256": "122050b4df91b5fcec63e04ab64ecc1b0ffefa4a6f090d66f3184bc3f083f723"
+    },
+    {
+      "file": "media/final/cube-left-direct.npz",
+      "bytes": 174658,
+      "sha256": "b985106422d0513ead49c52f17a8b0f9952877cc13838476cd4f26d9d0c6d412"
+    },
+    {
+      "file": "media/final/cube-middle.jpg",
+      "bytes": 93142,
+      "sha256": "b5a2f07568a4cd7dca980dfc243d73967bd4421834d19a24c26bde709af930c7"
+    },
+    {
+      "file": "media/final/cube-preview.gif",
+      "bytes": 18494716,
+      "sha256": "85cc41d1832286b5d158bfa811347a2ebed7a213970b0591df22ad7181ee76df"
+    },
+    {
+      "file": "media/final/penspin-comparison.mp4",
+      "bytes": 4728587,
+      "sha256": "d6fe5b207d6d32acf0f868181290a722b62702c372a786d5582796eb27333f23"
+    },
+    {
+      "file": "media/final/penspin-ending.jpg",
+      "bytes": 103553,
+      "sha256": "00876ec7e4dec9d74d0182d832caa1865c603b9eda88bdecaa5e4f5eb488aa4a"
+    },
+    {
+      "file": "media/final/penspin-footer.png",
+      "bytes": 10917,
+      "sha256": "8264c427111f641a54134ddab973d8d34ccdce19d55cd1e445f2467df1b16834"
+    },
+    {
+      "file": "media/final/penspin-header.png",
+      "bytes": 16159,
+      "sha256": "f3bf57a96ad6e79328b1b527b56253acbb76a01e9f56ed9f546031b850b8fd61"
+    },
+    {
+      "file": "media/final/penspin-left-adapted.json",
+      "bytes": 361330,
+      "sha256": "5dc556e1f6e41808c7b1d7daad024e9488c364d1e30cd0a4043fa3ae570e14d5"
+    },
+    {
+      "file": "media/final/penspin-left-adapted.log",
+      "bytes": 14496,
+      "sha256": "93cb2a1deb3902c80952bcff3e3edf97c5f407d9b9d85c2cbb73c3084ad0f6dd"
+    },
+    {
+      "file": "media/final/penspin-left-adapted.mp4",
+      "bytes": 3117354,
+      "sha256": "72c27fab273fcd9a77a431c218481ba06e8c7c8b3c08c0a1c62bb29cbdd6eaeb"
+    },
+    {
+      "file": "media/final/penspin-left-adapted.npz",
+      "bytes": 194250,
+      "sha256": "d2b0b96b0f4085419acedf9bc6d58bf1c3ce437dcd25fabf15c89ca6c479bdfe"
+    },
+    {
+      "file": "media/final/penspin-left-direct.json",
+      "bytes": 361483,
+      "sha256": "366df273059eaf2089481528fca1cffdb6c42f8e2f138c0c7c7dacba9137227e"
+    },
+    {
+      "file": "media/final/penspin-left-direct.log",
+      "bytes": 14492,
+      "sha256": "65002e5069fb21d9b81851564ca866319f219beeee8f6db20ccfa4ccafdd14d2"
+    },
+    {
+      "file": "media/final/penspin-left-direct.mp4",
+      "bytes": 1802926,
+      "sha256": "34b798cb31d93ef725c205fdeb82e4c3fa968d330dd91657958386ab1fa257ed"
+    },
+    {
+      "file": "media/final/penspin-left-direct.npz",
+      "bytes": 169600,
+      "sha256": "4ef589f0dab9159efc616b746916339838dc839f2ea0df7400b6bce986ebf560"
+    },
+    {
+      "file": "media/final/penspin-middle.jpg",
+      "bytes": 105381,
+      "sha256": "aceb4febab367c1698d596e1cd62b973861bfc66ab0bad40b6b0cf823d58e4e2"
+    },
+    {
+      "file": "media/final/penspin-preview.gif",
+      "bytes": 4594467,
+      "sha256": "d822f21190f71530235d4f8a2292dbe2c08c21a21607cf4038d601278483e564"
+    },
+    {
+      "file": "media/original/cube-left-adapted.json",
+      "bytes": 37704,
+      "sha256": "e0009c4a1030aa1e01922de3a763c09d1965287938baaa1919501a60d3d60fe6"
+    },
+    {
+      "file": "media/original/cube-left-adapted.mp4",
+      "bytes": 4507439,
+      "sha256": "40024c69809e5175f4a97057a5aacd22bcdf1371b9add58bae583faf3a2e0d98"
+    },
+    {
+      "file": "media/original/cube-left-comparison.mp4",
+      "bytes": 10517397,
+      "sha256": "d5c3b3bd5138a91e8e4caefc064448d1ea3d314c74488165378f8b2084551934"
+    },
+    {
+      "file": "media/original/cube-left-direct.json",
+      "bytes": 37726,
+      "sha256": "097e923f1ee30057f19264370708aa7be492e444a4f643ba6050f78ca096366b"
+    },
+    {
+      "file": "media/original/cube-left-direct.mp4",
+      "bytes": 7008202,
+      "sha256": "d34727986ad76fc5c5a5d981fc2b7b7dcbe159e0ccae7dd9c3bcfa4958452cb6"
+    },
+    {
+      "file": "media/original/penspin-left-adapted.json",
+      "bytes": 37269,
+      "sha256": "08df1b21883e6792075b212a8481e4ca25ed38bba34b18a33de5c63b6791152f"
+    },
+    {
+      "file": "media/original/penspin-left-adapted.mp4",
+      "bytes": 3260107,
+      "sha256": "d30b8c596024f138822bcde486cc4b28bc4dbd67313026e78aecf4e8932631df"
+    },
+    {
+      "file": "media/original/penspin-left-comparison.mp4",
+      "bytes": 4741957,
+      "sha256": "aad2f658918e19ba227fddcd3a5f2e1616844ed44b4591b76b11123f0ec40c96"
+    },
+    {
+      "file": "media/original/penspin-left-direct.json",
+      "bytes": 37297,
+      "sha256": "e4a43f2ec08eea47159bcb997ccb397980031412f6d43b16ef021c110d48e5ad"
+    },
+    {
+      "file": "media/original/penspin-left-direct.mp4",
+      "bytes": 1944402,
+      "sha256": "a959039236d63a89b0175a0699e9a77e33050eb21581679fffb9a4e786544842"
+    },
+    {
+      "file": "original-source/left_hand_transfer.py",
+      "bytes": 7223,
+      "sha256": "4a9428e0add3bf5fee3863a91ad93352fa0f547c573d14db49ac2d182125029f"
+    },
+    {
+      "file": "original-source/render_left.py",
+      "bytes": 8425,
+      "sha256": "3e4917d0f6c62e7df5939a6022c6d8d0d467d1905462f25130dfc60c3191a3a9"
+    },
+    {
+      "file": "original-source/run_left_tests.sh",
+      "bytes": 1781,
+      "sha256": "fe80de86f22b678914d94e1bec0ab4840bd62b59c81660648ebc6b894f2d99f7"
+    },
+    {
+      "file": "validation/final-coordinate-tests.log",
+      "bytes": 98,
+      "sha256": "3cf21b916026d9bdf5505677d70e1415dfb908088c33333bdefe35727ce62fce"
+    },
+    {
+      "file": "validation/lint.log",
+      "bytes": 47,
+      "sha256": "bc3310b60bfcdb035382e9d2c7106927e5dea0e4001822af699d2c6e0d985e16"
+    },
+    {
+      "file": "validation/task-tests.log",
+      "bytes": 10918,
+      "sha256": "7bf450e090a9794f22e7edced40baa69d0f687882b303e5ebe0a7486d21b3b32"
+    },
+    {
+      "file": "validation/video-decode.json",
+      "bytes": 5752,
+      "sha256": "bcc964423f4c9985d5b3f11f74d33cfdff8695c00026cd5a2ea35c852dd6d598"
+    }
+  ]
+}

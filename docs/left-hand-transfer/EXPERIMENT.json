@@ -1,0 +1,75 @@
+{
+  "source_commit": "a14da8e95d95219d1325637453cfe5cd8fe9af24",
+  "base_commit": "b2b98d7054a8d1b0f5cf295d5acaebc4358bc6a9",
+  "capture_date_utc": "2026-10-23",
+  "independent_captures": {
+    "original": 4,
+    "final": 4
+  },
+  "derived_comparisons": {
+    "original": 2,
+    "final": 2
+  },
+  "seed": 42,
+  "runs": [
+    {
+      "task": "cube",
+      "mode": "direct",
+      "metadata": "media/final/cube-left-direct.json",
+      "frames": 1000,
+      "fps": 50,
+      "resets": 0,
+      "targets_reached": 0,
+      "checkpoint_sha256": "8fbd62247fcb88e54daf0b7a90b6571b253dd880eb98567f9b51585b5770f74f",
+      "min_object_height_m": 0.4896317422389984
+    },
+    {
+      "task": "cube",
+      "mode": "adapted",
+      "metadata": "media/final/cube-left-adapted.json",
+      "frames": 1000,
+      "fps": 50,
+      "resets": 0,
+      "targets_reached": 9,
+      "checkpoint_sha256": "8fbd62247fcb88e54daf0b7a90b6571b253dd880eb98567f9b51585b5770f74f",
+      "min_object_height_m": 0.4774772524833679
+    },
+    {
+      "task": "penspin",
+      "mode": "direct",
+      "metadata": "media/final/penspin-left-direct.json",
+      "frames": 1000,
+      "fps": 50,
+      "resets": 0,
+      "targets_reached": null,
+      "checkpoint_sha256": "8a54ee787422f922b3462b29945089dc6e326d06b668e73aae754619b2fe9ddb",
+      "min_object_height_m": 0.0042424509301781654,
+      "mean_position_error_cm": 45.89714543110132,
+      "mean_shaft_error_deg": 52.90120438790321
+    },
+    {
+      "task": "penspin",
+      "mode": "adapted",
+      "metadata": "media/final/penspin-left-adapted.json",
+      "frames": 1000,
+      "fps": 50,
+      "resets": 0,
+      "targets_reached": null,
+      "checkpoint_sha256": "8a54ee787422f922b3462b29945089dc6e326d06b668e73aae754619b2fe9ddb",
+      "min_object_height_m": 0.5117288827896118,
+      "mean_position_error_cm": 0.5783589870780707,
+      "mean_shaft_error_deg": 4.70048462459445
+    }
+  ],
+  "limitations": [
+    "Single seed, 20-second horizon",
+    "Official left geometry with transferred right-hand actuator calibration",
+    "PenSpin play disables position/orientation error terminations; resets alone do not measure success",
+    "No hardware validation or retraining"
+  ],
+  "original_source": {
+    "wuji_mjlab_commit": "26b99c6338641e8edc17caf87922e6e1767121fa",
+    "wuji_description_commit": "c2cd7f8d1ef8b6dc8cb907c17daa5a88b4442d95",
+    "external_scripts": "original-source/"
+  }
+}

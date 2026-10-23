@@ -1,0 +1,62 @@
+{
+  "repository": "sheilsarda2/wuji-mjlab",
+  "tag": "left-hand-transfer-evidence-a14da8e",
+  "source_commit": "a14da8e95d95219d1325637453cfe5cd8fe9af24",
+  "assets": [
+    {
+      "asset_name": "final-cube-comparison.mp4",
+      "bytes": 10347656,
+      "sha256": "3d959746f0dfb34d5821825ae85669688d230a89c4dcbd16f16d1d61e0a22210"
+    },
+    {
+      "asset_name": "final-cube-left-adapted.mp4",
+      "bytes": 4314479,
+      "sha256": "a2b099f60a9f1a8c0f0176cd5f6dcead51629fd561d5af3785c9131af7c78599"
+    },
+    {
+      "asset_name": "final-cube-left-direct.mp4",
+      "bytes": 6456514,
+      "sha256": "122050b4df91b5fcec63e04ab64ecc1b0ffefa4a6f090d66f3184bc3f083f723"
+    },
+    {
+      "asset_name": "final-cube-preview.gif",
+      "bytes": 18494716,
+      "sha256": "85cc41d1832286b5d158bfa811347a2ebed7a213970b0591df22ad7181ee76df"
+    },
+    {
+      "asset_name": "final-penspin-comparison.mp4",
+      "bytes": 4728587,
+      "sha256": "d6fe5b207d6d32acf0f868181290a722b62702c372a786d5582796eb27333f23"
+    },
+    {
+      "asset_name": "final-penspin-left-adapted.mp4",
+      "bytes": 3117354,
+      "sha256": "72c27fab273fcd9a77a431c218481ba06e8c7c8b3c08c0a1c62bb29cbdd6eaeb"
+    },
+    {
+      "asset_name": "final-penspin-left-direct.mp4",
+      "bytes": 1802926,
+      "sha256": "34b798cb31d93ef725c205fdeb82e4c3fa968d330dd91657958386ab1fa257ed"
+    },
+    {
+      "asset_name": "final-penspin-preview.gif",
+      "bytes": 4594467,
+      "sha256": "d822f21190f71530235d4f8a2292dbe2c08c21a21607cf4038d601278483e564"
+    },
+    {
+      "asset_name": "left-hand-transfer-evidence.zip",
+      "bytes": 86846793,
+      "sha256": "7bfe30d05dadbd15947ec71e7ad6c2b73ed744dae32b7e1f546deea6a7048e54"
+    },
+    {
+      "asset_name": "original-cube-left-comparison.mp4",
+      "bytes": 10517397,
+      "sha256": "d5c3b3bd5138a91e8e4caefc064448d1ea3d314c74488165378f8b2084551934"
+    },
+    {
+      "asset_name": "original-penspin-left-comparison.mp4",
+      "bytes": 4741957,
+      "sha256": "aad2f658918e19ba227fddcd3a5f2e1616844ed44b4591b76b11123f0ec40c96"
+    }
+  ]
+}
